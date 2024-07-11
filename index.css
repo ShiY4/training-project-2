@@ -1,0 +1,699 @@
+html{
+    box-sizing: border-box;
+}
+
+html,
+body{
+    height: 100%;
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 1.73em;
+    letter-spacing: 0.05em;
+}
+
+h1{
+    font-weight: 400;
+    color: #313131;
+}
+
+p{
+    font-family: "Golos Text", serif;
+    font-size: 20px;
+    line-height: 1.2em;
+    letter-spacing: 0.01px;
+    font-weight: 400;
+    color: #313131;
+}
+
+*, *::after, *::before{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    max-width: 1366px;
+    margin: 0 auto;
+}
+
+.header__logo{
+    position: absolute;
+    z-index: 10;
+    margin-left: 17.6%;
+    top: 15px;
+}
+
+/* Секция top-info */
+
+.top-info{
+    width: 100%;
+    height: 700px;
+}
+
+.top-info-bg{
+    width: 100%;
+    height: 700px;
+}
+
+.paper-container{
+    position: absolute;
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+}
+
+.paper-container__paper{
+    position: absolute;
+    top: -50px;
+    right: -100px;
+    rotate: 180deg;
+}
+
+.marble-container{
+    position: absolute;
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+    z-index: 4;
+    mix-blend-mode: color-burn;
+}
+
+.marble-container__marble{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 700px;
+}
+
+.city-container{
+    z-index: 2;
+    position: relative;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.city-container__city{
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+}
+
+.city-container__path{
+    z-index: 3;
+    position: absolute;
+    bottom: 0;
+    padding-right: 25px;
+}
+
+/* Круг с текстом на фоне */
+
+.sun-container{
+    position: relative;
+    top: -700px;
+    height: 700px;
+    overflow: hidden;
+}
+
+.sun-container-sun{
+    left: 49vw;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    min-width: 660px;
+    height: 700px;
+    background: url('./assets/Ellipse6.png') top no-repeat;
+}
+
+.sun-container-sun__text{
+    position: absolute;
+    top: 0;
+    mix-blend-mode: overlay;
+} 
+
+/* Шахматные фигуры */
+
+.chess-container__first-chess{
+    z-index: 1;
+    position:absolute;
+    left: 383px;
+    top: 165px;
+}
+
+.chess-container__second-chess{
+    position:absolute;
+    left: 50px;
+    top: 270.36px;
+}
+
+.chess-container__third-chess{
+    z-index: 5;
+    position:absolute;
+    left: 157px;
+    top: 482.59px;
+}
+
+.chess-container__fourth-chess{
+    z-index: 5;
+    position: absolute;
+    left: 560px;
+    top: 558.2px;
+}
+
+.main-info-content{
+    width: 542px;
+    z-index: 10;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    position: absolute;
+    top: 124px;
+    margin-left: 17.6%;
+    overflow: hidden;
+}
+
+.main-info-title{
+    margin-bottom: 24px;
+    text-transform: uppercase;
+}
+
+.main-info-title__text_2{
+    text-align: center;
+}
+
+.main-info-title__text_3{
+    text-align: right;
+}
+
+
+.main-info-subtitle__text{
+    font-size: 18px;
+    line-height: 1.29em;
+    text-align: center;
+}
+
+.main-info-buttons{
+    display: flex;
+    margin-top: 40px;
+    gap: 16px;
+}
+
+/* Кнопки */
+.button{
+    font-family: "Golos Text", serif;
+    font-size: 16px;
+    line-height: 1.3em;
+    letter-spacing: 0.01px;
+    font-weight: 500;
+    color: #313131;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    border: none;
+    font-family: "Golos Text";
+    text-align: center;
+    transition: 0.3s;
+}
+
+.button_black{
+    background-color: #1F1F1F;
+    color: #FFFFFF;
+}
+
+.button_black:hover{
+    background-color: #FBCE51;
+    color: #1F1F1F;
+    transition: 0.3s;
+}
+
+.button_transparent{
+    border: 2px solid #1F1F1F;
+    background-color: transparent;
+}
+
+.button_blocked{
+    background-color: #D6D6D6;
+}
+
+.button_transparent:hover{
+    background-color: #1F1F1F;
+    color: #FFFFFF;
+}
+
+.button_big{
+    padding: 20px 49px;
+    width: 263px;
+    height: 72px;
+}
+
+.button_small{
+    padding-left: 3px;
+    height: 44px;
+    width: 44px;
+}
+
+.button_small_invert{
+    transform: scale(-1, -1);
+}
+
+.button_detail{
+    width: 113px;
+    height: 35px;
+    font-size: 16px;
+    color: #3057A2;
+    padding: 12px;
+    border: 1px solid #3057A2;
+    font-weight: 500;
+}
+
+.button_detail:hover{
+    background-color: #3057A2;
+    color: #FFFFFF;
+    font-weight: 500;
+}
+
+/* Бегущая строка */
+
+.running-line-container{
+    overflow: hidden;
+}
+
+.running-line{
+    display: flex;
+    align-items: center;
+    width: 200%;
+    height: 60px;
+    overflow: hidden;
+    background-color: #F54932;
+    gap: 30px;
+}
+
+.running-line-text__text{
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 22px;
+    white-space: nowrap;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    
+}
+
+.running-line-text{
+    display: flex;
+    gap: 30px;
+    width: 100%;
+}
+
+.running-line-text__text::after{
+    display: block;
+    content: '';
+    height: 6px;
+    width: 6px;
+    background: #FFFFFF;
+    position: absolute;
+    top: 45%;
+    border-radius: 5px;
+    right: -18px;
+}
+
+.running-line-text {
+    white-space: nowrap;
+    animation: runningText 10s linear infinite;
+}
+
+@keyframes runningText {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-101.2%); }
+}
+
+
+/* main-content */
+
+.main-content{
+    display: flex;
+    flex-direction: column;
+    max-width: 1366px;
+    margin-top: 80px;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+.idea{
+    display: flex;
+    padding: 0 65px;
+    align-items: center;
+}
+
+.idea__text{
+    font-size: 36px;
+    text-transform: uppercase;
+    line-height: 1.35em;
+    letter-spacing: 0.1px;
+    padding-bottom: 15px;
+}
+
+.idea__text-2{
+    padding: 45px 0 0 20px;
+    text-transform: uppercase;
+    font-size: 36px;
+    line-height: 1.35em;
+    letter-spacing: 0.001rem;
+}
+
+.idea__text_bold{
+    font-weight: 700;
+    letter-spacing: 0.01rem;
+    color: #F54932;
+}
+
+.idea__text_bold-2{
+    font-weight: 700;
+    color: #F54932;
+    letter-spacing: 0.001rem;
+}
+
+.idea-image{
+    padding-right: 15px;
+}
+
+.booking{
+    display: flex;
+    max-width: 1366px;
+    margin-bottom: 145px;
+}
+
+.booking-image{
+    mix-blend-mode: color-burn;
+}
+
+.booking-image__image{
+   padding-left: 36px;
+}
+
+/* booking-info */
+
+.booking-info{
+    width: 100%;
+}
+
+/* Таблица в booking-info */
+
+.booking-info-table{
+    margin: 60px 0 0 20px;
+    left: 20px;
+    top: 60px;
+    max-width: 704px;
+    text-align: left;
+    border-collapse: collapse;
+    border: none;
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+}
+
+.booking-info-table__item{
+    border: 1px solid #D0D0D0;
+    padding: 16px;
+}
+
+.booking-info-table__item:nth-child(2n+1){
+    border-left: 0;
+    padding: 16px 16px 16px 0;
+    
+}
+
+.booking-info-table__item:nth-child(2n){
+    border-right: 0;
+    padding: 16px 0 16px 16px;
+}
+
+.booking-info-table__item:nth-child(-n+2){
+    border-top: 0;
+    padding: 0 16px 16px 0;
+}
+
+.booking-info-table__item:nth-child(n+2):nth-child(-n+2){
+    border-top: 0;
+    padding: 0 0 16px 16px;
+}
+
+.booking-info-table__item:nth-child(n+9):nth-child(-n+9){
+    padding: 16px 16px 0 0;
+    border-bottom: 0;
+}
+
+.booking-info-table__item:nth-child(n+9){
+    padding: 16px 0 0 16px;
+    border-bottom: 0;
+}
+
+.booking-info-table-th__text{
+    line-height: 1.1em;
+}
+
+.booking-info-table-th__text_bold{
+    font-weight: 600;
+    line-height: 1.1em;
+}
+
+.booking-info-table-th__text_bold_span{
+    position: relative;
+}
+
+.booking-info-table-th__text_bold_span::before{
+    content: '';
+    height: 2px;
+    width: 81px;
+    background-color: #F54932;
+    display: block;
+    position: absolute;
+    top: 55%;
+}
+
+.booking-info-admin-link{
+    color: #3057A2;
+    font-family: 'Golos Text';
+    font-size: 20px;
+    line-height: 1.2em;
+    letter-spacing: 0.001rem;
+    margin: 50px 0 0 20px;
+}
+
+.booking-info-admin__link{
+    text-decoration: none;
+}
+
+/* Заголовок секции stages */
+
+.stages{
+    overflow: hidden;
+    margin-bottom: 200px;
+}
+
+.b-title{
+    padding: 0 0 50px 65px;
+}
+
+.b-title-text{
+    position: relative;
+    text-transform: uppercase;
+    font-size: 54px;
+    letter-spacing: -0.001rem;
+}
+
+.b-title-text__subtitle{
+    text-transform: none;
+    color: #3057A2;
+    width: 280px;
+    position: absolute;
+    bottom: 15px;
+    left: 300px;
+}
+
+/* Таблица секции stages */
+.stages-table-container{
+    display: flex;
+    max-width: 1366px;
+    padding: 0 79px 0 65px;
+}
+
+.stages-table{
+    display: grid;
+    gap: 20px;
+    grid-template-rows: repeat(2, 1fr), 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    color: #D0D0D0
+}
+
+.stages-table-item{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    padding: 20px 20px 20px 72px;
+    background: url('./assets/image23.png'),
+    url('./assets/57302cc52a455d8950d2e14514bb2879.png') right ;
+    background-position: 10%;
+    background-blend-mode:color-burn;
+}
+
+.stages-table-item_item-3{
+    grid-column-start: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.stages-table-item_item-7{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    position: relative;
+}
+
+.stages-table-item__image{
+    width: 36px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.stages-table-item__plane-image{
+    height: 230.42px;
+}
+
+.stages-table-item__plane{
+    position: absolute;
+    top: -115px;
+    right: -365px;
+}
+
+.stages-table-item__text{
+    font-weight: 500;
+}
+
+.stages-table-item__text_item-7{
+    max-width: 446px;
+    margin-right: 40%;
+    position: relative;
+}
+
+/* Секция participants */
+
+.participants{
+    
+}
+
+/* Заголовок и кнопки слайдера */
+
+.participants-top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-height: 65px;
+    margin-bottom: 60px;
+}
+
+.small-buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 79px;
+}
+
+.swiper-counter{
+    margin: 0 14px;
+    display: flex;
+    flex-direction: row;
+    gap: 1px;
+}
+
+.swiper-counter__text{
+    font-size: 16px;
+    color: #313131;
+    letter-spacing: 2px;
+}
+
+.swiper-counter__text_current{
+    
+}
+
+.swiper-counter__text_slash{
+    opacity: 0.6;
+}
+
+.swiper-counter__text_total{
+    opacity: 0.6;
+}
+
+/* Карточка слайдера */
+
+.participants-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.participants-card__avatar{
+    margin: 0 37px;
+    max-width: 320px;
+    max-height: 320px;
+}
+
+.participants-text{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
+    justify-content: center;
+    margin: 28px 0 20px 0;
+}
+
+.participants-text__text_name{
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.participants-text__text_rank{
+    opacity: 0.6;
+}
+
+/* Слайдер */
+
+.participants-swiper{
+    margin-bottom: 140px;
+}
+
+.participants-cards-page{
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 79px 0 65px;
+}
+
+.participants-cards-page_active{
+    display: flex;
+}
+
+/* Футер */
+
+.footer-text{
+    display: flex;
+    padding: 41px 72px 70px 66px;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-text__text{
+    opacity: 0.6;
+    font-size: 16px;
+    min-width: 1222px;
+}
