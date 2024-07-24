@@ -586,11 +586,6 @@ p{
 }
 
 /* Секция participants */
-
-.participants{
-    
-}
-
 /* Заголовок и кнопки слайдера */
 
 .participants-top{
@@ -619,10 +614,6 @@ p{
     font-size: 16px;
     color: #313131;
     letter-spacing: 2px;
-}
-
-.swiper-counter__text_current{
-    
 }
 
 .swiper-counter__text_slash{
@@ -697,5 +688,7 @@ p{
     font-size: 16px;
     min-width: 1222px;
 }
-/* 
-asd */
+
+@media (max-width: 1250px) {
+    
+}
